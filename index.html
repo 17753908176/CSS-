@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>圣杯布局</title>
+		<style>
+			#demo{
+				margin:0 auto;
+			}
+			#header,#footer{
+				height: 50px;
+				background-color: #aaa;
+			}
+			#container{
+				height: 200px;
+				margin: 10px 0;
+				padding: 0 210px;
+			}
+			/*让区域的内容先浮动在一行*/
+			/*让左侧的布局margin-left设置-100%*/
+			#left{
+				background-color: red;
+				margin-left: -100%;
+				width: 200px;
+				float: left;
+				position: relative;
+		
+				left: -210px;
+			}
+				/*让右侧的布局margin-left设置只需要负的宽度即可*/
+			#right{
+				background-color: green;
+				width: 200px;
+				margin-left: -200px;
+				float: left;
+				right: -210px;
+				position: relative;
+			}
+			/*让中间的宽度设置100%*/
+			#middle{
+				background: blue;
+				float: left;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--圣杯的html结构-->
+		<div id="demo">
+			<!--头部-->
+			<header id="header">头部</header>
+			<!--主区域圣杯-->
+			<div id="container">
+				<div id="middle">主区域</div>
+				<div id="left">左侧栏</div>
+				<div id="right">右侧栏</div>
+			</div>
+			<footer id="footer">底部</footer>
+		</div>
+	</body>
+</html>
